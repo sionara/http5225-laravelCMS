@@ -20,4 +20,9 @@ class Employee extends Model
         'phone',
         'role',
     ];
+
+    public function sales()
+    {
+        return $this->belongsTo(Employee::class);
+    }
 }

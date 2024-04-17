@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SaleController;
-use App\Models\Item;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,52 +21,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get(
-    'students/trash/{id}',
-    [EmployeeController::class, 'trash']
-)->name('students.trash');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get(
-    'students/trashed/',
-    [EmployeeController::class, 'trashed']
-)->name('students.trashed');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-Route::get(
-    'students/restore/{id}',
-    [EmployeeController::class, 'trash']
-)->name('students.restore');
+Route::get('employees/trash/{id}', [EmployeeController::class, 'trash'])->name('employees.trash');
+Route::get('employees/trashed/', [EmployeeController::class, 'trashed'])->name('employees.trashed');
+Route::get('employees/restore/{id}', [EmployeeController::class, 'trash'])->name('employees.restore');
 
-Route::get(
-    'students/trash/{id}',
-    [SaleController::class, 'trash']
-)->name('students.trash');
+Route::resource('employees', EmployeeController::class)->middleware(['auth', 'verified']);
+Route::resource('items', ItemController::class)->middleware(['auth', 'verified']);
+Route::resource('sales', SaleController::class)->middleware(['auth', 'verified']);
 
-Route::get(
-    'students/trashed/',
-    [SaleController::class, 'trashed']
-)->name('students.trashed');
-
-Route::get(
-    'students/restore/{id}',
-    [SaleController::class, 'trash']
-)->name('students.restore');
-
-Route::get(
-    'students/trash/{id}',
-    [ItemController::class, 'trash']
-)->name('students.trash');
-
-Route::get(
-    'students/trashed/',
-    [ItemController::class, 'trashed']
-)->name('students.trashed');
-
-Route::get(
-    'students/restore/{id}',
-    [ItemController::class, 'trash']
-)->name('students.restore');
-
-
-Route::resource('employees', EmployeeController::class);
-Route::resource('sales', SaleController::class);
-Route::resource('Item', ItemController::class);
+require __DIR__ . '/auth.php';

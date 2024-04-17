@@ -11,7 +11,7 @@ class UpdateEmployeeRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,11 @@ class UpdateEmployeeRequest extends FormRequest
     {
         return [
             //
+            'fname' => 'required|string',
+            'lname' => 'required|string',
+            'sin' => 'required|string',
+            'phone' => 'required|string',
+            'role' => 'required|string',
         ];
     }
 }

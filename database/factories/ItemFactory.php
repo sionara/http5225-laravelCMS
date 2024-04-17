@@ -17,10 +17,10 @@ class ItemFactory extends Factory
     public function definition(): array
     {
         return [
-            // 'item' => fake()->commerce()->productMaterial(),
-            // 'price' => fake()->randomNumber(3),
-            // 'inventory' => fake()->randomNumber(3),
-            // 'category' => fake()->randomElement(['Canine', 'Feline', 'Piscine', 'Murine']),
+            'item' => fake()->randomElement(['Dog food', 'Cat food']),
+            'price' => fake()->randomNumber(3),
+            'inventory' => fake()->randomNumber(3),
+            'category' => fake()->randomElement(['Canine', 'Feline', 'Piscine', 'Murine']),
         ];
     }
 }

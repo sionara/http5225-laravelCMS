@@ -45,9 +45,9 @@ class EmployeeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Employee $employee)
     {
-        return view('employees.edit', compact('Employee'));
+        return view('employees.edit', compact('employee'));
     }
 
     /**
@@ -57,6 +57,7 @@ class EmployeeController extends Controller
     {
         //
         $Employee->update($request->validated());
+        return redirect()->route('students.index');
     }
 
     /**

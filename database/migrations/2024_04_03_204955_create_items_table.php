@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->string('item');
-            $table->decimal('price', total: 10, places: 0);
+            $table->decimal('price', total: 6, places: 2);
             $table->smallInteger('inventory');
             $table->string('category');
             $table->timestamps();
