@@ -1,3 +1,22 @@
+## Pet Store Manager
+
+This web app manages the employees, sales, and items of a Pet Store. It is built using Laravel, PHP, and Blade Engine.
+
+## Features
+
+- Register/Login functionality with Breeze
+- CRUD functionality on Employees to see list of all employees, and to edit or delete them
+- check out the sales made on a particular date
+
+## Schema
+
+There are three main entities: Employees, Sales, and Items. Employees has a one-to-many relationship with sales, since one employee can make multiple sales. Therefore the sales entity is connected to employees through a foreign key of employee_id.
+There are also tables made to store registered users, which would represent any admin user for the Pet Store.
+
+## Demo
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
