@@ -2,9 +2,16 @@
 
 This web app manages the employees, sales, and items of a Pet Store. It is built using Laravel, PHP, and Blade Engine.
 
+Login Credentials:
+
+username: test@example.com
+password: password
+
+Or you can register a brand new user using the register page.
+
 ## Features
 
-- Register/Login functionality with Breeze
+- Register/Login functionality with Breeze. Creates an automatic admin user using seeders.
 - CRUD functionality on Employees to see list of all employees, and to edit or delete them
 - check out the sales made on a particular date
 
@@ -15,7 +22,39 @@ There are also tables made to store registered users, which would represent any 
 
 ## Demo
 
+Register
 
+![Screenshot 2024-04-17 233359](https://github.com/sionara/http5225-laravelCMS/assets/35111239/655d54be-17b7-45d5-9b47-a5fcb474a557)
+
+
+Login
+![Screenshot 2024-04-17 222944](https://github.com/sionara/http5225-laravelCMS/assets/35111239/a79129bb-dec6-4bbe-8bf5-744dfb21b85c)
+
+Dashboard
+![Screenshot 2024-04-17 223002](https://github.com/sionara/http5225-laravelCMS/assets/35111239/48bb4bde-2a8b-435c-a4e3-d3f82a0fb829)
+
+Employees list
+
+![Screenshot 2024-04-17 230500](https://github.com/sionara/http5225-laravelCMS/assets/35111239/3afb4589-ca5b-49b7-a3b5-b4f9e057e7db)
+
+Employee Details
+
+![Screenshot 2024-04-17 230510](https://github.com/sionara/http5225-laravelCMS/assets/35111239/d129328e-27fa-4c23-9b2d-8811cd82c90f)
+
+Add New Employee
+
+![Screenshot 2024-04-17 232644](https://github.com/sionara/http5225-laravelCMS/assets/35111239/29743054-e96f-4065-bb7c-29a08c3998b2)
+
+![Screenshot 2024-04-17 232703](https://github.com/sionara/http5225-laravelCMS/assets/35111239/8af4f7a5-2770-493a-a960-3718a174e94a)
+
+
+Update Existing Employee
+
+![Screenshot 2024-04-17 232721](https://github.com/sionara/http5225-laravelCMS/assets/35111239/1331aa3e-f32a-46cb-b5ab-0d0f5420f2bc)
+
+![Screenshot 2024-04-17 232727](https://github.com/sionara/http5225-laravelCMS/assets/35111239/0a883eaa-6a96-4d45-bb0b-adac7595c053)
+
+---------------------------------------------------------------------
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
