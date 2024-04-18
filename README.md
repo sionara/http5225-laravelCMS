@@ -54,6 +54,12 @@ Update Existing Employee
 
 ![Screenshot 2024-04-17 232727](https://github.com/sionara/http5225-laravelCMS/assets/35111239/0a883eaa-6a96-4d45-bb0b-adac7595c053)
 
+
+Results:
+
+I was able to complete the full CRUD functionality of one entity. Due to time constraints, I was not able to finish CRUD on the other entities. In the future, I would like to implement better design as well.
+
+
 ---------------------------------------------------------------------
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
